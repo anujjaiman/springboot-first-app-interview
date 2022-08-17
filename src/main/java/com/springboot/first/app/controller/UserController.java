@@ -24,6 +24,10 @@ public class UserController {
 
 	@PostMapping()
 	public ResponseEntity<UserDto> createdUser(@RequestBody UserDto userDto){
+		int i=10;
+		if(i<15) {
+			i=5;
+		}
 		return new ResponseEntity<UserDto> (userService.createUser(userDto), HttpStatus.OK) ;
 		
 	}
